@@ -1,6 +1,6 @@
 # DCGAN with FFT Image Generation
 
-This project implements a Deep Convolutional Generative Adversarial Network (DCGAN) that generates images in the frequency domain using Fast Fourier Transform (FFT). The generator creates FFT representations of images, which are then converted back to the spatial domain for visualization.
+This project is the implementation of paper "Hybrid GAN and Fourier Transformation for SAR Ocean Pattern Image Augmentation" presented at MetroSea 2024. It implements a Deep Convolutional Generative Adversarial Network (DCGAN) that generates images in the frequency domain using Fast Fourier Transform (FFT). The GAN-generated images lacked physical properties in the frequency domain. To address this issue, we modified the loss functions to calculate mean square error of (spectrum) the generated and real images in the frequency domain, improving the spectrum of the generated images. The generator creates FFT representations of images, which are then converted back to the spatial domain for real-world use cases.
 
 ## Features
 
@@ -36,7 +36,7 @@ This project implements a Deep Convolutional Generative Adversarial Network (DCG
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/DCGAN_FFT.git
+git clone https://github.com/omid-ghozatlou/DCGAN_FFT.git
 cd DCGAN_FFT
 ```
 
@@ -115,11 +115,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you use this code in your research, please cite:
 
 ```bibtex
-@software{dcgan_fft2024,
-  author = {Your Name},
-  title = {DCGAN with FFT Image Generation},
-  year = {2024},
-  publisher = {GitHub},
-  url = {https://github.com/yourusername/DCGAN_FFT}
-}
+@INPROCEEDINGS{10765638,
+  author={Keymasi, Mobina and Ghozatlou, Omid and Adueze, Emmanuel Weridongha and Datcu, Mihai},
+  booktitle={2024 IEEE International Workshop on Metrology for the Sea; Learning to Measure Sea Health Parameters (MetroSea)}, 
+  title={Hybrid GAN and Fourier Transformation for SAR Ocean Pattern Image Augmentation}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={469-474},
+  keywords={Training;Frequency-domain analysis;Oceans;Training data;Sea measurements;Generative adversarial networks;Radar polarimetry;Generators;Synthetic aperture radar;Overfitting;Climate change;Synthetic Aperture Radar (SAR);ocean SAR image generation;Generative Adversarial Networks (GANs);Fourier transformation;data augmentation},
+  doi={10.1109/MetroSea62823.2024.10765638}}
 ```
